@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="laporan prioritas kriteria" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a35a0630-0e03-4d5f-8867-47fd086f8695">
+	<property name="ireport.zoom" value="1.0000000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Data Kriteria" uuid="533e11a0-325a-4b60-815d-e8fe9eeb01ed">
+		<queryString language="SQL">
+			<![CDATA[SELECT * FROM kriteria ORDER BY kd_kriteria;]]>
+		</queryString>
+		<field name="kd_kriteria" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="nama_kriteria" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+		<field name="prioritas_kepentingan" class="java.lang.String">
+			<fieldDescription><![CDATA[]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="PATH_IMG" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT * FROM kriteria;]]>
+	</queryString>
+	<field name="kd_kriteria" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_kriteria" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="prioritas_kepentingan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="119" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="f0f68e88-9493-47b6-bea2-afcf1afc56bd" x="100" y="0" width="375" height="30"/>
+				<textElement textAlignment="Center" markup="none">
+					<font fontName="Times New Roman" size="20" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Pemilihan Paket Makanan]]></text>
+			</staticText>
+			<image onErrorType="Icon">
+				<reportElement uuid="2c76676b-63bc-493f-8397-a8a78bbc82c3" key="" x="0" y="0" width="100" height="105"/>
+				<imageExpression><![CDATA[$P{PATH_IMG}+"Logo Tamarind 150x150.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="24420867-119c-4247-bddc-fc9aa94c8b3b" x="100" y="30" width="375" height="30"/>
+				<textElement textAlignment="Center" markup="none">
+					<font fontName="Times New Roman" size="20" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Tamarind by Tastes of India]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ca1b2c60-1bab-4032-8065-18763fff9495" x="100" y="75" width="375" height="30"/>
+				<textElement textAlignment="Center" markup="none">
+					<font fontName="Times New Roman" size="12" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Jl. Puri Bunga No.3, RT.06/RW03, Cilandak Timur, Kecamatan Pasar Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12560.]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="3dca53f9-4a8b-488d-a484-2fbddfa8fea9" x="0" y="113" width="555" height="1"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="3a8735f4-c1cf-4e2c-900f-c320717556d5" positionType="Float" x="0" y="0" width="555" height="35"/>
+				<textElement textAlignment="Center" markup="none">
+					<font fontName="Times New Roman" size="18" isBold="true" isItalic="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[Laporan Prioritas Kriteria]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="234" splitType="Stretch">
+			<componentElement>
+				<reportElement uuid="27c6614c-8905-4e08-8f46-810d5d70c406" key="table" style="table" positionType="Float" x="0" y="0" width="555" height="86"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Data Kriteria" uuid="010244bd-d64f-419b-a29e-c72ff23cbc28">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column uuid="288a232a-f24c-4d08-8f2c-103a957ee57b" width="42">
+						<jr:tableHeader style="table_TH" height="25" rowSpan="1">
+							<staticText>
+								<reportElement uuid="3ee99e8f-f6fa-4c8b-814d-a56fc930068a" mode="Opaque" x="0" y="0" width="42" height="25" backcolor="#CCCCFF"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times New Roman" size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[No.]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table_TH" height="0" rowSpan="1"/>
+						<jr:columnHeader style="table_CH" height="0" rowSpan="1"/>
+						<jr:columnFooter style="table_CH" height="0" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="a95bc956-7d5f-4ef2-a57c-12bb126b3317" x="0" y="0" width="42" height="20"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman"/>
+									<paragraph leftIndent="4"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column uuid="1c35b805-31e7-4b21-9bac-973018cf082b" width="94">
+						<jr:tableHeader style="table_TH" height="25" rowSpan="1">
+							<staticText>
+								<reportElement uuid="49836c65-1fc5-4f3e-803f-821c3300eaf2" mode="Opaque" x="0" y="0" width="94" height="25" backcolor="#CCCCFF"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times New Roman" size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Kode Kriteria]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table_TH" height="0" rowSpan="1"/>
+						<jr:columnHeader style="table_CH" height="0" rowSpan="1"/>
+						<jr:columnFooter style="table_CH" height="0" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="ea1081e6-2122-498a-8c95-d91e8605f85a" x="0" y="0" width="94" height="20"/>
+								<textElement textAlignment="Center">
+									<font fontName="Times New Roman"/>
+									<paragraph leftIndent="4"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{kd_kriteria}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column uuid="320ac0af-99bc-4ac9-beef-c2913c912a20" width="189">
+						<jr:tableHeader style="table_TH" height="25" rowSpan="1">
+							<staticText>
+								<reportElement uuid="73d098fa-0834-43c9-b7ff-52b01d773d48" mode="Opaque" x="0" y="0" width="189" height="25" backcolor="#CCCCFF"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times New Roman" size="10" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Nama Kriteria]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table_TH" height="0" rowSpan="1"/>
+						<jr:columnHeader style="table_CH" height="0" rowSpan="1"/>
+						<jr:columnFooter style="table_CH" height="0" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="da7e2008-cbff-4757-a7f0-ea660e38104d" x="0" y="0" width="189" height="20"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+									<paragraph leftIndent="4"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{nama_kriteria}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column uuid="d3f58ba8-706a-460c-89b1-225bb2e51cc1" width="225">
+						<jr:tableHeader style="table_TH" height="25" rowSpan="1">
+							<staticText>
+								<reportElement uuid="908c5cb6-949a-4326-a1eb-d34fa1e30232" mode="Opaque" x="0" y="0" width="225" height="25" backcolor="#CCCCFF"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="Times New Roman" isBold="true"/>
+								</textElement>
+								<text><![CDATA[Prioritas Kepentingan]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:tableFooter style="table_TH" height="0" rowSpan="1"/>
+						<jr:columnHeader style="table_CH" height="0" rowSpan="1"/>
+						<jr:columnFooter style="table_CH" height="0" rowSpan="1"/>
+						<jr:detailCell style="table_TD" height="20" rowSpan="1">
+							<textField>
+								<reportElement uuid="3154fe36-ecff-46dd-a967-c5fbd314ea81" x="0" y="0" width="225" height="20"/>
+								<textElement>
+									<font fontName="Times New Roman"/>
+									<paragraph leftIndent="4"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{prioritas_kepentingan}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement uuid="ba0f7ab6-e9ed-4ae7-aa12-8328ca724ec1" positionType="Float" x="10" y="214" width="165" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[(Suharti)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="73c43927-c0f8-41e0-be4d-59720f66457f" positionType="Float" x="10" y="117" width="165" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Mengetahui, ]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="5a5d75fd-d7cd-4ded-b54e-c5a57d0a4c36" positionType="Float" x="390" y="214" width="165" height="1"/>
+			</line>
+			<line>
+				<reportElement uuid="d9f9cf15-f7f3-4eaa-97b3-d4f0457eed2e" positionType="Float" x="10" y="214" width="165" height="1"/>
+			</line>
+			<staticText>
+				<reportElement uuid="6bdf0088-71c0-4cc6-b548-4f0377709e3a" positionType="Float" x="390" y="117" width="37" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Jakarta, ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="9077bcdd-40e6-4cea-ba27-f0331bf03c8d" positionType="Float" x="390" y="214" width="165" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[(Admin)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e8476ef6-3c49-44bd-9af2-becb9afe885d" positionType="Float" x="10" y="137" width="165" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Manager Tamarind]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="a2b13b61-81ea-4bf7-ae1d-da5440e0f1ba" positionType="Float" x="390" y="137" width="165" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[Dibuat oleh,]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="cd7d6e4d-2c88-41c1-bcec-98bf890d126d" positionType="Float" x="427" y="117" width="128" height="20"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
