@@ -1,6 +1,6 @@
 # SPK Pemilihan Paket Makanan dengan Metode Analytical Hierarchy Process (AHP)
 
-i[img alt](https://github.com/neubrii/spk-pemilihan-paket-makanan-dengan-metode-ahp/blob/e9cda9aac9d8b0207a49b1e9a6a5b2bed94613ee/screenshot.png)
+![img alt](https://github.com/neubrii/spk-pemilihan-paket-makanan-dengan-metode-ahp/blob/e9cda9aac9d8b0207a49b1e9a6a5b2bed94613ee/screenshot.png)
 
 ## Deskripsi  
 Proyek ini merupakan hasil skripsi saya pada semester 8. Aplikasi ini bertujuan untuk membantu proses pemilihan paket makanan menggunakan metode **Analytical Hierarchy Process (AHP)**. Aplikasi dibangun menggunakan **Java (NetBeans)** untuk aplikasi desktop dan **phpMyAdmin (MySQL)** sebagai basis datanya.
